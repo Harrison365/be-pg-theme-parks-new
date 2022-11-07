@@ -1,3 +1,5 @@
+test test
+
 # PG Theme Parks
 
 We have a database full of information all about theme parks. The goal today is to build a REST API so that people can see, add to, and update the data from across the internet without handing over complete access to the database.
@@ -93,7 +95,7 @@ Response body structure:
 }
 ```
 
-#### ❗ **Hint:** Don't forget to [parse the incoming request body to JSON](https://expressjs.com/en/4x/api.html#express.json)! 
+#### ❗ **Hint:** Don't forget to [parse the incoming request body to JSON](https://expressjs.com/en/4x/api.html#express.json)!
 
 ### 4. DELETE /api/parks/:park_id
 
@@ -158,7 +160,7 @@ If no query is provided, respond with the unchanged ride.
 
 ## Even More Challenges!
 
-Still going? 😮  Have a go at building any of the following endpoints:
+Still going? 😮 Have a go at building any of the following endpoints:
 
 - `GET /api/parks/:park_id/stalls` => Responds with an object containing an array of stalls at the specified theme park.
 - `POST /api/parks/:park_id/stalls` => Adds a new stall to the database and responds with an object containing the new stall object if the post is successful.
