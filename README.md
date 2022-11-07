@@ -28,7 +28,7 @@ Each of the following challenges has a test already written in `__tests__/app.te
 
 ### Create a connection pool
 
-- Install [node-postgres](https://node-postgres.com/)
+- Install [node-postgres](https://node-postgres.com/)(npm install pg)
 - Create a new [connection pool](https://node-postgres.com/features/connecting) in the `db/index.js` file
 - Export the connection pool so that it is available for use in other files
 
