@@ -6,7 +6,7 @@ afterAll(() => {
   if (db.end) db.end();
 });
 
-describe.only("1. GET /api/parks", () => {
+describe("1. GET /api/parks", () => {
   test("status:200, responds with an array of park objects", () => {
     return request(app)
       .get("/api/parks")
