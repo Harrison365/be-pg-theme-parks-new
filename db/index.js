@@ -11,4 +11,4 @@ if (!process.env.PGDATABASE) {
 
 const db = new Pool();
 
-module.exports = { db };
+module.exports = db;
