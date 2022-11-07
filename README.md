@@ -152,7 +152,7 @@ Example response:
 
 Add a new ride to the database and responds with an object containing the new ride object.
 
-### 9. PATCH /api/rides/:ride_id?vote=<up OR down>
+### 9. PATCH /api/rides/:ride_id?vote=< up OR down>
 
 Adjusts the votes (by 1) of an individual ride dependant on the request query and responds with an object containing the updated ride.
 

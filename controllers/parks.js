@@ -4,6 +4,8 @@ const {
   insertPark,
   removeParkById,
   updateParkById,
+  fetchRidesByParkId,
+  fetchRideById,
 } = require("../models/parks.js");
 
 //MAKE SURE YOU ARE BRINGING IN MODEL FUNCTIONS
@@ -45,5 +47,19 @@ exports.patchParkById = (req, res) => {
   const { park_name, annual_attendance } = req.body;
   updateParkById(park_id, park_name, annual_attendance).then((newPark) => {
     res.status(200).send({ park: newPark });
+  });
+};
+
+exports.getRidesByParkId = (req, res) => {
+  const { park_id } = req.params;
+  fetchRidesByParkId(park_id).then((rides) => {
+    res.status(200).send({ rides });
+  });
+};
+
+exports.getRideById = (req, res) => {
+  const { ride_id } = req.params;
+  fetchRideById(ride_id).then((ride) => {
+    res.status(200).send({ ride });
   });
 };

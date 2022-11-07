@@ -49,3 +49,19 @@ exports.updateParkById = (park_id, park_name, annual_attendance) => {
       return result.rows[0]; //[0] as were only expecting 1 and dont want an array
     });
 };
+
+exports.fetchRidesByParkId = (park_id) => {
+  return db
+    .query(`SELECT * FROM rides WHERE park_id = $1`, [park_id])
+    .then((result) => {
+      return result.rows;
+    });
+};
+
+exports.fetchRideById = (ride_id) => {
+  return db
+    .query(`SELECT * FROM rides WHERE ride_id = $1`, [ride_id])
+    .then((result) => {
+      return result.rows;
+    });
+};
